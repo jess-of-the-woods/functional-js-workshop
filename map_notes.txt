@@ -1,0 +1,46 @@
+Basic.map notes
+
+convert:  
+
+function doubleAll(numbers) {
+  var result = []
+  for (var i = 0; i < numbers.length; i++) {
+    result.push(numbers[i] * 2)
+  }
+  return result
+}
+
+to Array.map
+
+-----
+
+Example code:
+
+from 'freecodecamp'
+
+var timesFour = oldArray.map(function(val){
+  return val * 4;
+});
+
+---
+
+from 'MDN'
+
+var numbers = [1, 4, 9];
+var doubles = numbers.map(function(num) {
+  return num * 2;
+});
+
+doubles is now [2, 8, 18]. numbers is still [1, 4, 9]
+
+---
+
+@rich_kotare
+
+Rich: Hint: you have two functions there.  Do both of them return a value?
+
+Jess: Do I have two functions because there are two sets of curly braces? I really don't know whether they both return a value..
+
+Let me put it another way... That function inside the call to map is executed once for every element in the array. At the end of it, result should have the right contents
+
+But how does the result get back to the rest of the program?

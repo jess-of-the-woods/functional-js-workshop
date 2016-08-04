@@ -1,0 +1,47 @@
+Basic Filter Notes
+
+Array: messages
+messages has message keys.. so is accessible with .message
+# Task
+
+Use Array#filter to write a function called getShortMessages.
+
+getShortMessages takes an array of objects with '.message' properties and returns an array of messages that are less than < 50 characters long.
+
+The function should return an array containing the messages themselves, without their containing object.
+
+## Arguments
+
+  * messages: an Array of 10 to 100 random objects that look something like this:
+
+    {
+      message: 'Esse id amet quis eu esse aute officia ipsum.' // random
+    }
+
+## Conditions
+
+  * Do not use any for/while loops or Array#forEach.
+  * Do not create any unnecessary functions e.g. helpers.
+
+## Hint
+
+  * Try chaining some Array methods!
+
+## Example
+
+    [ 'Tempor quis esse consequat sunt ea eiusmod.',
+      'Id culpa ad proident ad nulla laborum incididunt.',
+      'Ullamco in ea et ad anim anim ullamco est.',
+      'Est ut irure irure nisi.' ]
+
+slack
+@rich_kotare
+
+did you want messages ​less than​ 50 or ​greater than​ 50?
+
+
+doesn't this way filter out messages larger than 50? that is what I am wanting to do. I have tried it both ways.. '>' & '<', both fail to pass
+
+well the name of your function is getShortMessages so I'm assuming you want the short ones. a 'return true' will include the element in the array, a 'return false' will exclude it. So for a short message, < 50 will be what you want. Note that you should test val.message.length, not val.message
+
+filter keeps elements if the callback returns true. It's not "filtering out", if that makes sense. "filtering in", I suppose.
